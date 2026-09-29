@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+
+<body>
+    <script>
+        let fil = prompt("Introduce el número de filas:");
+        let col = prompt("Introduce el número de columnas:");
+        document.write("<table border='1'>");
+        for (let i = 0; i < fil; i++) {
+            document.write("<tr>");
+            for (let j = 0; j < col; j++) {
+                document.write(`<td> ${i}, ${j}</td>`);
+            }
+            document.write("</tr>");
+        }
+        document.write("</table>");
+    </script>
+</body>
+
+</html>
