@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <link href="estilo.css" rel="stylesheet">
+</head>
+
+<body>
+    <script>
+        let datos = prompt("Introduce tu nombre, dos apellidos y tu fecha de nacimiento(dd/mm/aa) separado por comas:");
+        let arrDatos = datos.split(",");
+
+        if (arrDatos.length == 3) {
+            let arrTitulo = ["Nombre", "Primer apellido", "Segundo apellido", "Fecha"];
+            let i = 0;
+            let fecha = new Date();
+            let arrFecha = arrDatos[3].split("/");
+
+            fecha.setDate(arrFecha[0]);
+            console.log(fecha.getDate());
+            fecha.setMonth(arrFecha[1]);
+            console.log("val arr" + fecha.getMonth());
+            fecha.setFullYear(arrFecha[2]);
+            console.log(fecha.getFullYear());
+            console.log(fecha);
+            arrDatos.pop();
+            arrDatos.push(fecha);
+            document.write("<table border='1'>");
+
+            for (let dat in arrDatos) {
+                document.write("<tr>");
+                document.write(`<td>  ${arrTitulo[i]}</td>`);
+                document.write(`<td>  ${arrDatos[dat]}</td>`);
+                i++;
+                document.write("</tr>");
+
+
+            }
+
+            document.write("</table>");
+        }
+        else{
+            alert("no has introducido todos los datos pedidos")
+        }
+
+
+    </script>
+</body>
+
+</html>
