@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <link href="estilo.css" rel="stylesheet">
+</head>
+
+<body>
+    <script>
+        let nombrePrompt;
+        let arrDatos = [];
+        let arrTitulos = ["nombre", "apellidos", "edad", "email", "teléfono", "centro", "curso", "observaciones", "año"];
+        let validDato = true;
+        validNombre = /^([A-Z][a-z]*)( [A-Z][a-z]*)*$/;
+        validApellidos = /^([A-Z][a-z]*)( [A-Z][a-z]*)*$/;
+        validEdad = /[0-9]{1,3}/;
+        validEmail = /[a-z_0-9]+[@][a-z0-9]+[.][a-z]{2,3}/;
+        validTelefono = /^(9|6)[0-9]{8}/;
+        validCentro = /.{5,120}/;
+        validCurso = /[0-9]{1,2}/;
+        ValidObservaciones = /\w{1,120}/;
+        validAnio = /^(1|2)[0-9]{3}/;
+
+        let tituloNombre = "nombre";
+        let tituloApellidos = "apellidos";
+        let tituloEdad = "edad";
+        let tituloEmail = "email";
+        let tituloTelefono = "telefono";
+        let tituloCentro = "centro";
+        let tituloCurso = "curso";
+        let tituloObservaciones = "observaciones";
+        let tituloAnio = "año";
+        let datoPrompt;
+
+        datoPrompt = prompt("Introduce " + tituloNombre);
+        comprobar(tituloNombre, datoPrompt, validNombre);
+        datoPrompt = prompt("Introduce " + tituloApellidos);
+        comprobar(tituloApellidos, datoPrompt, validApellidos);
+        datoPrompt = prompt("Introduce " + tituloEdad);
+        comprobar(tituloEdad, datoPrompt, validEdad);
+        datoPrompt = prompt("Introduce " + tituloEmail);
+        comprobar(tituloEmail, datoPrompt, validEmail);
+        datoPrompt = prompt("Introduce " + tituloTelefono);
+        comprobar(tituloTelefono, datoPrompt, validTelefono);
+        datoPrompt = prompt("Introduce " + tituloCentro);
+        comprobar(tituloCentro, datoPrompt, validCentro);
+        datoPrompt = prompt("Introduce " + tituloCurso);
+        comprobar(tituloCurso, datoPrompt, validCurso);
+        datoPrompt = prompt("Introduce " + tituloObservaciones);
+        comprobar(tituloObservaciones, datoPrompt, ValidObservaciones);
+        datoPrompt = prompt("Introduce " + tituloAnio);
+        comprobar(tituloAnio, datoPrompt, validAnio);
+
+
+
+
+        function comprobar(titulo = "", dato = "", expresion = /.*/) {
+
+            do {
+
+                validDato = expresion.test(dato);
+                console.log("la expresion de " + titulo + " es " + validDato);
+                if (validDato) {
+                    arrDatos.push(dato);
+                } else {
+                    alert(titulo + " introducido no es válido.");
+                    dato = prompt("Introduce " + titulo);
+                    validDato = expresion.test(dato);
+                    console.log("la expresion de " + titulo + " es " + validDato);
+                }
+            }
+            while (!validDato);
+        }
+
+        document.write("<table border='1'>");
+        for (let dat in arrDatos) {
+            document.write("<tr>");
+            document.write(`<td>  ${arrDatos[dat]}</td>`);
+            document.write("</tr>");
+
+        }
+
+        document.write("</table>");
+
+    </script>
+</body>
+
+</html>
