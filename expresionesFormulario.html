@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+
+<body>
+    <!-- <p>• Nombre y Apellidos: No debe dejar introducir números ni caracteres especiales, la primera letra debe ser
+        mayúscula.
+        • Edad: solo debe dejar introducir números como máximo de 3 dígitos
+        • Validar el email: teniendo en cuenta que puede contener letras, números y guiones altos o bajos una @ letras y
+        números sólo un punto y 2 o 3 letras para el dominio.
+        • Validar el teléfono: que empiece por 6 o 9 y que tenga el tamaño que tiene que tener.
+        • Centro: debe tener entre 5 y 120 caracteres
+        • Curso: un dígito 1 o 2
+        • Observaciones: texto y/o números de tamaño 120
+        • Año: (lo que os queráis complicar es el último)
+        Mauro Garcia Gonzalez
+    </p> -->
+    <script>
+        let datos = prompt("Introduce tu nombre, dos apellidos separado");
+
+        let nombreCompleto = datos.split(" ");
+
+        let nombre = nombreCompleto[0];
+        let ape1 = nombreCompleto[1];
+        let ape2 = nombreCompleto[2];
+
+        let validNombre = /^[A-Z][a-z]*$/.test(nombre);
+        let validApe1 = /^[A-Z][a-z]*$/.test(ape1);
+        let validApe2 = /^[A-Z][a-z]*$/.test(ape2);
+
+        if (true) {
+            alert("datos correctos");
+        } else {
+            alert("datos incorrectos");
+        }
+
+        //false
+    </script>
+</body>
+
+</html>
