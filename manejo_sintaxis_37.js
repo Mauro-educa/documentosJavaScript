@@ -106,7 +106,7 @@ for (let i = 0; i < 5; i++) {
 }
 
 
-let CadenaEntera = "A partir de un texto almacenar en 5 arrays diferentes las palabras de una, dos, tres, cuatro, cinco letras o más de cinco";
+let CadenaEntera = "Un texto es el la una composición de signos codificados en un sistema de escritura (como un alfabeto) que forma una unidad de sentido. Su tamaño puede ser variable. También es texto una composición de caracteres imprimibles (con grafema) generados por un algoritmo de cifrado que, aunque ¡no tienen sentido! para cualquier persona, sí puede ser descifrado por su destinatario original. En otras palabras, a un texto es un entramado; de signos con una intención comunicativa que adquiere sentido en determinado contexto. ¿Es cierto? Es complicado.";
 
 let arrCadenaEntera = CadenaEntera.split(" ");
 let arr1letr = Array();
@@ -117,7 +117,7 @@ let arr5letr = Array();
 let arrMasLetr = Array();
 let palabra = "";
 for (let i = 0; i < arrCadenaEntera.length; i++) {
-    let palabra = arrCadenaEntera[i].trim();
+    palabra = arrCadenaEntera[i].replace(/[?¿(),.]/g, "").trim();
     switch (palabra.length) {
         case 1:
             arr1letr.push(palabra);
@@ -157,3 +157,19 @@ console.log(" palabras de más de cinco letras " + arrMasLetr.slice(0, arrMasLet
 
 
 // console.log(cadenaLetrasRevertida);
+
+//ej 58------------Ejercicio de cadenas: Alternar palabras en mayúsculas con palabras en minúsculas
+
+let cadena1 = "Un texto es el la una composición de signo";
+let arrCadena = cadena1.split(" ");
+
+for (let i = 0; i < arrCadena.length; i++) {
+    arrCadena[i] = arrCadena[i].replace(/[?¿(),.]/g, "").trim();
+    if (i % 2 == 0) {
+        arrCadena[i] = arrCadena[i].toUpperCase();
+    } else {
+        arrCadena[i] = arrCadena[i].toLowerCase();
+    }
+}
+let cadenaArr = arrCadena.join(" ");
+console.log(cadenaArr);
