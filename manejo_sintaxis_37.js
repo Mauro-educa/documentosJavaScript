@@ -1,0 +1,159 @@
+// var tablaA = [[1, 2, 3], [4, 5, 6], [7, 8, 9, 10], ['A', 'B', 'C']];
+// // console.log(tablaA[0].length);
+// tablaA[1][1] = 20;
+// //foreach 
+// tablaA.forEach(function (e, i) {
+//     tablaA[i].forEach(function (e, j) {
+//         console.log(tablaA[i][j]);
+//     });
+// });
+
+// //bidimensional a partir de un unidimensional
+// var tablaB = new Array(5);
+// tablaB.fill(['A', 'B', 'C']);
+// console.log(tablaB);
+
+// tablaB.forEach(function (e, i) {
+//     let cadenaFila = "";
+//     tablaB[i].forEach(function (e, j) {
+//         cadenaFila += tablaB[i][j] + ","
+//     });
+//     console.log("\n" + cadenaFila);
+// });
+
+
+
+// //array bidimensional a partir de dos unidimensionales
+// var tablaC = Array.of([1, 2, 3], [3, 4, 5], [tablaB]);
+// console.log(tablaC);
+// let cadenaArrayC = "";
+// for (let i = 0; i < tablaC.length; i++) {
+
+//     for (let j = 0; j < tablaC[i].length; j++) {
+//         if (j == tablaC[i].length - 1) {
+//             cadenaArrayC += tablaC[i][j];
+//         }
+//         else {
+//             cadenaArrayC += tablaC[i][j] + ",";
+//         }
+//     }
+//     cadenaArrayC += "\n";
+// }
+// console.log("\n" + cadenaArrayC);
+// // console.log( cadenaFila);
+// // for (let i = 0; i < tablaC.length; i++) {
+// //     let cadenaFila = "";
+// //     for (let j = 0; j < tablaC[i].length; j++) {
+
+// //             cadenaFila += tablaC[i][j] + ","
+// //     }
+// //     console.log("\n" + cadenaFila);
+// // }
+
+// //vart tableD
+// var tablaD = Array(Array(3), Array(3));
+// console.log(tablaD);//bidimensional pero vacío
+
+var frase = "Esto es un texto para hacer ejercicios con cadenas. Se realizará una transformación sobre el mismo. Se emplearán métodos del objeto String";
+
+let arrFrase = frase.split(" ");
+let cadenaPalabrasRevertida = " ";
+for (let i = arrFrase.length; i > 0; i--) {
+    // console.log(arrFrase[i]);
+    cadenaPalabrasRevertida += " " + arrFrase[i];
+}
+console.log(cadenaPalabrasRevertida);
+
+let arrLetras = frase.split("");
+let cadenaLetrasRevertida = "";
+for (let i = arrLetras.length; i > 0; i--) {
+    // console.log(arrLetras[i]);
+    cadenaLetrasRevertida += "" + arrLetras[i];
+}
+console.log(cadenaLetrasRevertida);
+
+
+let anio = 2021;
+for (let i = 0; i < 5; i++) {
+    anio++;
+    let fecha = new Date(anio + "-02-12");
+    let dia = fecha.getDay();
+    console.log(fecha);
+    switch (dia) {
+
+        case 0:
+            console.log("Domingo");
+            break;
+        case 1:
+            console.log("Lunes");
+            break;
+        case 2:
+            console.log("Martes");
+            break;
+        case 3:
+            console.log("Miércoles");
+            break;
+        case 4:
+            console.log("Jueves");
+            break;
+        case 5:
+            console.log("Viernes");
+            break;
+        case 6:
+            console.log("Sábado");
+            break;
+    }
+}
+
+
+let CadenaEntera = "A partir de un texto almacenar en 5 arrays diferentes las palabras de una, dos, tres, cuatro, cinco letras o más de cinco";
+
+let arrCadenaEntera = CadenaEntera.split(" ");
+let arr1letr = Array();
+let arr2letr = Array();
+let arr3letr = Array();
+let arr4letr = Array();
+let arr5letr = Array();
+let arrMasLetr = Array();
+let palabra = "";
+for (let i = 0; i < arrCadenaEntera.length; i++) {
+    let palabra = arrCadenaEntera[i].trim();
+    switch (palabra.length) {
+        case 1:
+            arr1letr.push(palabra);
+            break;
+        case 2:
+            arr2letr.push(palabra);
+            break;
+        case 3:
+            arr3letr.push(palabra);
+            break;
+        case 4:
+            arr4letr.push(palabra);
+            break;
+        case 5:
+            arr5letr.push(palabra);
+            break;
+        default:
+            arrMasLetr.push(palabra);
+            break;
+
+    }
+}
+console.log("número de palabras de una letra " + arr1letr.length);
+console.log("número de palabras de dos letras " + arr2letr.length);
+console.log("número de palabras de tres letras " + arr3letr.length);
+console.log("número de palabras de cuatro letras " + arr4letr.length);
+console.log("número de palabras de cinco letras " + arr5letr.length);
+console.log("número de palabras de más de cinco letras " + arrMasLetr.length);
+
+
+console.log(" palabras de una letra " + arr1letr.slice(0, arr1letr.length));
+console.log(" palabras de dos letras " + arr2letr.slice(0, arr2letr.length));
+console.log(" palabras de tres letras " + arr3letr.slice(0, arr3letr.length));
+console.log(" palabras de cuatro letras " + arr4letr.slice(0, arr4letr.length));
+console.log(" palabras de cinco letras " + arr5letr.slice(0, arr5letr.length));
+console.log(" palabras de más de cinco letras " + arrMasLetr.slice(0, arrMasLetr.length));
+
+
+// console.log(cadenaLetrasRevertida);

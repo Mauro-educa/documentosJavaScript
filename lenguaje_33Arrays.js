@@ -3,8 +3,29 @@ let aux=0;
 let mayor=0;
 let arrayOrdenado=[];
 
+
+for(let i=0; i<arrayOrdenado.length; i++){
+    
+}
+
+
+
+
+
+
+
+
+
 const original = ["manzana", "pera", "manzana", "uva", "pera"];
 const otroArray = [];
+
+
+
+
+
+
+
+
 
 
 
