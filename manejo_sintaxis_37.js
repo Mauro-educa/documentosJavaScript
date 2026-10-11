@@ -106,57 +106,129 @@ for (let i = 0; i < 5; i++) {
 }
 
 
-let CadenaEntera = "Un texto es el la una composición de signos codificados en un sistema de escritura (como un alfabeto) que forma una unidad de sentido. Su tamaño puede ser variable. También es texto una composición de caracteres imprimibles (con grafema) generados por un algoritmo de cifrado que, aunque ¡no tienen sentido! para cualquier persona, sí puede ser descifrado por su destinatario original. En otras palabras, a un texto es un entramado; de signos con una intención comunicativa que adquiere sentido en determinado contexto. ¿Es cierto? Es complicado.";
+// let CadenaEntera = "Un texto es el la una composición de signos codificados en un sistema de escritura (como un alfabeto) que forma una unidad de sentido. Su tamaño puede ser variable. También es texto una composición de caracteres imprimibles (con grafema) generados por un algoritmo de cifrado que, aunque ¡no tienen sentido! para cualquier persona, sí puede ser descifrado por su destinatario original. En otras palabras, a un texto es un entramado; de signos con una intención comunicativa que adquiere sentido en determinado contexto. ¿Es cierto? Es complicado.";
 
-let arrCadenaEntera = CadenaEntera.split(" ");
-let arr1letr = Array();
-let arr2letr = Array();
-let arr3letr = Array();
-let arr4letr = Array();
-let arr5letr = Array();
-let arrMasLetr = Array();
-let palabra = "";
-for (let i = 0; i < arrCadenaEntera.length; i++) {
-    palabra = arrCadenaEntera[i].replace(/[?¿(),.]/g, "").trim();
-    switch (palabra.length) {
-        case 1:
-            arr1letr.push(palabra);
-            break;
-        case 2:
-            arr2letr.push(palabra);
-            break;
-        case 3:
-            arr3letr.push(palabra);
-            break;
-        case 4:
-            arr4letr.push(palabra);
-            break;
-        case 5:
-            arr5letr.push(palabra);
-            break;
-        default:
-            arrMasLetr.push(palabra);
-            break;
+// let arrCadenaEntera = CadenaEntera.split(" ");
+// let arr1letr = Array();
+// let arr2letr = Array();
+// let arr3letr = Array();
+// let arr4letr = Array();
+// let arr5letr = Array();
+// let arrMasLetr = Array();
+// let palabra = "";
+// for (let i = 0; i < arrCadenaEntera.length; i++) {
+//     palabra = arrCadenaEntera[i].replace(/[?¿(),.]/g, "").trim();
+//     switch (palabra.length) {
+//         case 1:
+//             arr1letr.push(palabra);
+//             break;
+//         case 2:
+//             arr2letr.push(palabra);
+//             break;
+//         case 3:
+//             arr3letr.push(palabra);
+//             break;
+//         case 4:
+//             arr4letr.push(palabra);
+//             break;
+//         case 5:
+//             arr5letr.push(palabra);
+//             break;
+//         default:
+//             arrMasLetr.push(palabra);
+//             break;
 
-    }
-}
-console.log("número de palabras de una letra " + arr1letr.length);
-console.log("número de palabras de dos letras " + arr2letr.length);
-console.log("número de palabras de tres letras " + arr3letr.length);
-console.log("número de palabras de cuatro letras " + arr4letr.length);
-console.log("número de palabras de cinco letras " + arr5letr.length);
-console.log("número de palabras de más de cinco letras " + arrMasLetr.length);
+//     }
+// }
+// console.log("número de palabras de una letra " + arr1letr.length);
+// console.log("número de palabras de dos letras " + arr2letr.length);
+// console.log("número de palabras de tres letras " + arr3letr.length);
+// console.log("número de palabras de cuatro letras " + arr4letr.length);
+// console.log("número de palabras de cinco letras " + arr5letr.length);
+// console.log("número de palabras de más de cinco letras " + arrMasLetr.length);
 
 
-console.log(" palabras de una letra " + arr1letr.slice(0, arr1letr.length));
-console.log(" palabras de dos letras " + arr2letr.slice(0, arr2letr.length));
-console.log(" palabras de tres letras " + arr3letr.slice(0, arr3letr.length));
-console.log(" palabras de cuatro letras " + arr4letr.slice(0, arr4letr.length));
-console.log(" palabras de cinco letras " + arr5letr.slice(0, arr5letr.length));
-console.log(" palabras de más de cinco letras " + arrMasLetr.slice(0, arrMasLetr.length));
+// console.log(" palabras de una letra " + arr1letr.slice(0, arr1letr.length));
+// console.log(" palabras de dos letras " + arr2letr.slice(0, arr2letr.length));
+// console.log(" palabras de tres letras " + arr3letr.slice(0, arr3letr.length));
+// console.log(" palabras de cuatro letras " + arr4letr.slice(0, arr4letr.length));
+// console.log(" palabras de cinco letras " + arr5letr.slice(0, arr5letr.length));
+// console.log(" palabras de más de cinco letras " + arrMasLetr.slice(0, arrMasLetr.length));
 
 
 // console.log(cadenaLetrasRevertida);
+
+//ej 58------------Ejercicio de cadenas: Alternar palabras en mayúsculas con palabras en minúsculas
+
+// let cadena1 = "Un texto es el la una composición de signo";
+// let arrCadena = cadena1.split(" ");
+
+// for (let i = 0; i < arrCadena.length; i++) {
+//     arrCadena[i] = arrCadena[i].replace(/[?¿(),.]/g, "").trim();
+//     if (i % 2 == 0) {
+//         arrCadena[i] = arrCadena[i].toUpperCase();
+//     } else {
+//         arrCadena[i] = arrCadena[i].toLowerCase();
+//     }
+// }
+// let cadenaArr = arrCadena.join(" ");
+// console.log(cadenaArr);
+
+
+
+// let CadenaEntera = "Un texto es el la una composición de signos codificados en un sistema de escritura (como un alfabeto) que forma una unidad de sentido. Su tamaño puede ser variable. También es texto una composición de caracteres imprimibles (con grafema) generados por un algoritmo de cifrado que, aunque ¡no tienen sentido! para cualquier persona, sí puede ser descifrado por su destinatario original. En otras palabras, a un texto es un entramado; de signos con una intención comunicativa que adquiere sentido en determinado contexto. ¿Es cierto? Es complicado.";
+
+// let arrCadenaEntera = CadenaEntera.split(" ");
+// let arr1letr = Array();
+// let arr2letr = Array();
+// let arr3letr = Array();
+// let arr4letr = Array();
+// let arr5letr = Array();
+// let arrMasLetr = Array();
+// let palabra = "";
+// let palabra1 = false;
+// let palabra2 = false;
+// let palabra3 = false;
+// let palabra4 = false;
+// let palabra5 = false;
+// let palabra6 = false;
+// for (let i = 0; i < arrCadenaEntera.length; i++) {
+
+//     if (palabra1 = /\s[a-zA-Z]\s/.test(arrCadenaEntera)) {
+//         arr1letr.push(palabra);
+//     }
+//         if (palabra2 = /^\s[a-zA-Z]\s$/.test(palabra)) {
+//         arr2letr.push(palabra);
+//     }
+//         if (palabra3 = /^\s[a-zA-Z]\s$/.test(palabra)) {
+//         arr3letr.push(palabra);
+//     }
+//         if (palabra3 = /^\s[a-zA-Z]\s$/.test(palabra)) {
+//         arr4letr.push(palabra);
+//     }
+//         if (palabra4 = /^\s[a-zA-Z]\s$/.test(palabra)) {
+//         arr5letr.push(palabra);
+//     }
+//         if (palabra5 = /^\s[a-zA-Z]\s$/.test(palabra)) {
+//         arrMasLetr.push(palabra);
+//     }
+
+
+// }
+// console.log("número de palabras de una letra " + arr1letr.length);
+// console.log("número de palabras de dos letras " + arr2letr.length);
+// console.log("número de palabras de tres letras " + arr3letr.length);
+// console.log("número de palabras de cuatro letras " + arr4letr.length);
+// console.log("número de palabras de cinco letras " + arr5letr.length);
+// console.log("número de palabras de más de cinco letras " + arrMasLetr.length);
+
+
+// console.log(" palabras de una letra " + arr1letr.slice(0, arr1letr.length));
+// console.log(" palabras de dos letras " + arr2letr.slice(0, arr2letr.length));
+// console.log(" palabras de tres letras " + arr3letr.slice(0, arr3letr.length));
+// console.log(" palabras de cuatro letras " + arr4letr.slice(0, arr4letr.length));
+// console.log(" palabras de cinco letras " + arr5letr.slice(0, arr5letr.length));
+// console.log(" palabras de más de cinco letras " + arrMasLetr.slice(0, arrMasLetr.length));
 
 //ej 58------------Ejercicio de cadenas: Alternar palabras en mayúsculas con palabras en minúsculas
 
@@ -173,3 +245,5 @@ for (let i = 0; i < arrCadena.length; i++) {
 }
 let cadenaArr = arrCadena.join(" ");
 console.log(cadenaArr);
+
+
