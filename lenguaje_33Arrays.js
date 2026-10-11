@@ -11,21 +11,8 @@ for(let i=0; i<arrayOrdenado.length; i++){
 
 
 
-
-
-
-
-
 const original = ["manzana", "pera", "manzana", "uva", "pera"];
 const otroArray = [];
-
-
-
-
-
-
-
-
 
 
 
