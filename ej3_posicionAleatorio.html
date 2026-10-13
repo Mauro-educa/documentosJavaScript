@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+
+<body>
+    <div name="bloque" id="bloque">
+
+    </div>
+    <style type="text/css" id="estilos">
+        #bloque {
+            position: relative;
+            width: 400px;
+            height: 400px;
+           
+        }
+    </style>
+    <script>
+        
+        let meses = Array("enero", "febrero", "marzo", "abril", "mayo", "junio", "julio", "agosto", "septiembre", "octubre", "noviembre", "diciembre");
+        let contenidoBloque = "";
+        let contenidoMes = "";
+        for (let i = 0; i < 12; i++) {
+            let mes = meses[i];
+            let x = Math.floor(Math.random() * 300);
+            let y = Math.floor(Math.random() * 300);
+            let r = Math.floor(Math.random() * 255);
+            let g = Math.floor(Math.random() * 255);
+            let b = Math.floor(Math.random() * 255);
+            
+            contenidoBloque += `<div id="${mes}">${mes}</div> `;
+            contenidoMes += `#${mes}{background-color:rgb(${r},${g},${b});  width: 100px; position: absolute;
+                            top: ${x}px;   
+                            left: ${y}px; 
+                            border:2px, solid black;}`;
+
+        }
+        document.getElementById('bloque').innerHTML =contenidoBloque;
+            document.getElementById('estilos').innerHTML =contenidoMes;
+    </script>
+
+</body>
+
+</html>
