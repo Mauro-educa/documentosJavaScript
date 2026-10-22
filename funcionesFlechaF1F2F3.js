@@ -6,8 +6,8 @@
 // Una función f2 visualice en consola los elementos que no sean divisibles por 2.
 
 // Una función f3 que devuelva la suma de todos los elementos que estén en una posición par.
-
 let arrayA = [1, 2, 3, 4];
+
 let arrayB = [];
 let f1 = (a, b) => {
     for (let val of a) {
@@ -18,7 +18,7 @@ let f1 = (a, b) => {
     }
     return b;
 };
-console.log("f1------------");
+console.log("---------------f1------------");
 console.log(f1(arrayA, arrayB));
 
 let f2 = a => {
@@ -28,19 +28,17 @@ let f2 = a => {
         }
     }
 };
-console.log("f2------------");
+console.log("---------------f2------------");
 f2(arrayA);
 
-console.log("f3------------");
+console.log("---------------f3------------");
 let f3 = a => {
-    let acc = 0;
-    for (let posi in a) {
-        
-        if (posi % 2 == 0) {
-            // console.log("posi",posi);
-            acc += a[posi];
-        }
-    }
-    return acc;
+  return a.filter((a,i)=>i%2==0).reduce((acc,n)=>acc+n);
 };
 console.log(f3(arrayA));
+
+arrayA.filter
+
+
+// let f1 =a => a.filter(valor =>valor%4==0).map(valor=>valor *=3);
+// console.log(f1(arrayA));
