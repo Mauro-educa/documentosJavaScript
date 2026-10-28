@@ -11,7 +11,7 @@ let OBJETO1 = {
 
 
 let OBJETO2 = {
-    nombre: "La hipótesis más peligrosa", color: "blanco", autor: "Arturo Pérez-Reverte", npaginas: 500, editorial: "Salvia", forrado: false, urlcover: "url2",
+    nombre: "La hipótesis más peligrosa", color: "blanco", autor: "Arturo Pérez-Reverte", npaginas: 50, editorial: "Salvia", forrado: false, urlcover: "url2",
     comprar: function () {
         console.log(`libro de aventuras del autor ${this.autor} comprado`);
     },
@@ -20,7 +20,7 @@ let OBJETO2 = {
     }
 };
 let OBJETO3 = {
-    nombre: "Un hombre de honor", color: "verde", autor: "Paloma Sánchez", npaginas: 200, editorial: "El Barco de Vapor", forrado: true, urlcover: "url3",
+    nombre: "Un hombre de honor", color: "verde", autor: "Paloma Sánchez", npaginas: 20, editorial: "El Barco de Vapor", forrado: true, urlcover: "url3",
     comprar: function () {
         console.log(`libro de aventuras del autor ${this.autor} comprado`);
     },
@@ -67,19 +67,56 @@ let checkLibro2 = (libroNombre, biblioteca) => {
     }
 };
 
+let checkLibro3 = (titulo, biblioteca) => biblioteca.find(libro => libro.nombre == titulo) ? true : false;
+
+
 console.log(checkLibro(biblioteca, OBJETO1));
 
-console.log("por titulo",checkLibro2("El quijote",biblioteca));
+console.log("por titulo", checkLibro2("El quijote", biblioteca));
+
+console.log(checkLibro3("El quijote", biblioteca));
+
+biblioteca = [...biblioteca, OBJETO4];
+
+// for (let libro of biblioteca) {
+//     console.log(libro.editorial);
+
+// }
+
+let LibrosLargos = biblioteca.filter(libro => checkPages(libro));
+
+for (let libro of LibrosLargos) {
+    console.log(libro.nombre);
+
+}
+// let checkAutor = (autor, biblioteca) => biblioteca.find(libro => libro.autor == autor) != undefined  ? true : false;
+
+let checkAutor = (autor, biblioteca) => biblioteca.find(libro => libro.autor == autor) != undefined  ? `hay de ${autor}` : `NO hay de ${autor}`;
+
+let checkAutor2 = (autor, biblioteca) => biblioteca.find(libro => libro.autor == autor) || "no se ecuentra";
+console.log("checkAutor: ",checkAutor("Cervantes",biblioteca));
+console.log("checkAutor2: ",checkAutor2("Cervantes",biblioteca));
+
+let forrarLibro =(biblioteca)=> biblioteca.map(libro=>libro.forrado=true);
+forrarLibro(biblioteca);
+for (let libro of biblioteca) {
+    console.log(libro.forrado);
+}
+
+let prestarLibro= (biblioteca,titulo)=> biblioteca=biblioteca.filter( libro=> libro==biblioteca.findIndex(libro=> libro.nombre==titulo));
+
+prestarLibro(biblioteca,"El quijote");
+for (let libro of biblioteca) {
+    console.log("-",libro.nombre);
+}
 
 
+let devolverLibro=(biblioteca,libro)=> biblioteca.push(libro);
 
-
-
-
-
-
-
-
+prestarLibro(biblioteca,OBJETO1);
+for (let libro of biblioteca) {
+    console.log(libro.nombre);
+}
 
 
 
