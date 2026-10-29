@@ -119,8 +119,6 @@ for (let libro of biblioteca) {
 }
 
 
-
-
 //nombre, color, autor, npaginas, editorial, forrado, urlcover
 // function comprar(objeto1) {
 //     let autor = objeto1.autor;
