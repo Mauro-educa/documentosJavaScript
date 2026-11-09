@@ -62,6 +62,8 @@ function generaVehiculos() {
     }
 }
 
+ generaVehiculos();
+
 function mostrarVehiculos(){
   document.write("<table border='1'>");
         for (let i = 0; i < fil; i++) {
@@ -79,3 +81,5 @@ function mostrarVehiculos(){
         }
         document.write("</table>");
 }
+
+mostrarVehiculos();
