@@ -1,39 +1,42 @@
-class Vehiculo {
-    constructor(pasajeros) {
-        this._pasajeros = pasajeros;
-    }
-    set pasajeros(value) {
-        this._pasajeros = value;
-    }
-    get pasajeros() {
-        return this._pasajeros;
-    }
-}
+// class Vehiculo {
+//     constructor(pasajeros) {
+//         this._pasajeros = pasajeros;
+//     }
+//     set pasajeros(value) {
+//         this._pasajeros = value;
+//     }
+//     get pasajeros() {
+//         return this._pasajeros;
+//     }
+// }
 
-class Coche extends Vehiculo {
-    constructor(pasajeros, color) {
-        super(pasajeros);
-        this._color = color;
-    }
-    set color(value) {
-        this._color = value;
-    }
-    get color() {
-        return this._color;
-    }
-}
-class Camion extends Vehiculo {
-    constructor(pasajeros, tara) {
-        super(pasajeros);
-        this._tara = tara;
-    }
-    set tara(value) {
-        this._tara = value;
-    }
-    get tara() {
-        return this._tara;
-    }
-}
+// class Coche extends Vehiculo {
+//     constructor(pasajeros, color) {
+//         super(pasajeros);
+//         this._color = color;
+//     }
+//     set color(value) {
+//         this._color = value;
+//     }
+//     get color() {
+//         return this._color;
+//     }
+// }
+// class Camion extends Vehiculo {
+//     constructor(pasajeros, tara) {
+//         super(pasajeros);
+//         this._tara = tara;
+//     }
+//     set tara(value) {
+//         this._tara = value;
+//     }
+//     get tara() {
+//         return this._tara;
+//     }
+// }
+
+import {Coche} from "./coche.js";
+import {Camion} from "./camion.js";
 
 function capturaReloj() {
     let now = new Date();
@@ -74,12 +77,12 @@ function mostrarVehiculos() {
         document.write("<tr>");
         document.write(`<td>Hora: ${capturaReloj()}</td>`);
         document.write(`<td>Tipo: ${arrayGlobal[i].constructor.name}</td>`);
-        document.write(`<td> ${arrayGlobal[i].pasajeros}</td>`);
+        document.write(`<td> ${arrayGlobal[i].Pasajeros}</td>`);
         if (arrayGlobal[i].constructor.name == "Coche") {
-            document.write(`<td bgcolor= "${arrayGlobal[i].color}">Color: ${arrayGlobal[i].color}</td>`);
+            document.write(`<td bgcolor= "${arrayGlobal[i].Color}">Color: ${arrayGlobal[i].Color}</td>`);
         }
         else {
-            document.write(`<td>Tara: ${arrayGlobal[i].tara}</td>`);
+            document.write(`<td>Tara: ${arrayGlobal[i].Tara}</td>`);
         }
         document.write("</tr>");
     }
