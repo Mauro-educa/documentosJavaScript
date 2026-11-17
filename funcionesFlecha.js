@@ -21,7 +21,7 @@ a.forEach(function (e) {
 
 a.forEach((e, i, arr) => console.log(e, i, arr));
 
-let b = [10, 20, 30];
+let b = [[10, 20, 30],[40, 50, 60]];
 console.log(b.map(e => e + 1));
 
 console.log(b.map(e => e + b[1]));

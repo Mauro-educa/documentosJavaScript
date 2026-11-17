@@ -12,8 +12,8 @@ console.log(ej1, ej2);
 const [lu, , mi] = arr;
 console.log(ej1, ej2);
 
-const { apellidos: ejApellidos } = persona;
-const [apellido1, apellido2] = ejApellidos;
+const { apellidos:[apellido1, apellido2] } = persona;
+// const [apellido1, apellido2] = ejApellidos;
 console.log(apellido1, apellido2);
 
 const persona2 = {
