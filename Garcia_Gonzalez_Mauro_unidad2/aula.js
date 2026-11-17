@@ -2,13 +2,11 @@ import { Equipo } from "./equipo.js";
 
 export class Aula {
     #numero;
-    #equipos;
+    #equipos = [[], []];
     #puestos;
-    // #filas;
-    // #columnas
+
     constructor(numero, filas, columnas) {
         this.#numero = numero;
-        // this.#equipos=Equipo;
         this.#puestos = filas * columnas;
 
     }
@@ -31,27 +29,44 @@ export class Aula {
         return this.#puestos;
     }
 
-    activarEquipo(equipo, fila, columna) {
-        if (this.#equipos.length >= fila) {
-            this.#equipos[fila][columna].push(equipo);
+    activaEquipo(equipo, fila, columna) {
+        if (this.#equipos.length > fila) {
+            this.#equipos[fila][columna] = equipo;
             return true;
         } else {
-            return true;
+            return false;
         }
     }
     getPosicion(IdEquipo) {
-        let arrFilCol = [0, 0];
-        this.#equipos.foreach(e, fila =>
+        let arrFilCol = null;
+        this.#equipos.forEach((e, fila) =>
             this.#equipos[fila].forEach(eq, columna =>
-                eq.Id == IdEquipo ? arrFilCol = [fila, columna] : arrFilCol = [null]));
+                eq.Id == IdEquipo ? arrFilCol = [fila, columna] : null));
+
+        return arrFilCol;
     }
+
+    // getPorcentajeOcupacion() {
+    //     let nEquipos = 0;
+    //     let nPosiciones = 0;
+    //     this.#equipos.forEach((e, fila) =>
+    //         this.#equipos[fila].forEach((eq, columna) => {
+    //             if (eq != null) {
+    //                 nEquipos++
+    //             }
+    //             nPosiciones++;
+    //         }));
+    //     return Math.floor(nEquipos * 100 / nPosiciones);
+    // }
 
     getPorcentajeOcupacion() {
         let nEquipos = 0;
-        this.#equipos.foreach(e, fila =>
-            this.#equipos[fila].forEach(eq, columna =>
-                eq != NULL ? nEquipos++ : nEquipos));
+        this.#equipos.forEach((fila) =>
+            fila.forEach((eq) => {
+                if (eq != null) {
+                    nEquipos++;
+                }
+            }));
         return Math.floor(nEquipos * 100 / this.#puestos);
-
     }
 }

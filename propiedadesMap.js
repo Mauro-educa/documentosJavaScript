@@ -163,3 +163,7 @@ array[0]=7;
 console.log(array);
 console.log(copyArray);
 
+let mapa1 = new Map([["platano", 4], ["sandia", 5]]);
+//set añade una pareja clave-valor
+mapa1.set("manzana", 1);
+mapa1.set("manzana", 2);

@@ -20,20 +20,20 @@ asignaciones.forEach ((asignacion)=>{
     console.log(dptoNaranco.addAula(new Aula(asignacion.aula,FILAS,COLUMNAS), asignacion.grupo)?"Se ha insertado el aula "+asignacion.aula:"No se ha podido insertar el aula "+asignacion.aula);
 });
 
-// console.log("\n%cRECUENTO TOTAL EQUIPOS dptoNaranco: "+dptoNaranco.getNEquipos()+" equipos--------------------\n", 'background: #FADBD8');
+console.log("\n%cRECUENTO TOTAL EQUIPOS dptoNaranco: "+dptoNaranco.getNEquipos()+" equipos--------------------\n", 'background: #FADBD8');
 
 console.log ("%cACTIVANDO EQUIPOS DE SOBREMESA QUE SE VAN A USAR...", 'background: #222; color: #bada55');
-// asignaciones.forEach ((asignacion)=>{
-//     let aula=dptoNaranco.Aulas.get(asignacion.aula).aula;
-//     for (let i=0;i<FILAS;i++)
-//         for (let j=0; j<COLUMNAS;j++)
-//             aula.activaEquipo(new Equipo("Descripción equipo "+aula.Numero+"-"+i+"-"+j, false), i, j);
-//     });
+asignaciones.forEach ((asignacion)=>{
+    let aula=dptoNaranco.Aulas.get(asignacion.aula).aula;
+    for (let i=0;i<FILAS;i++)
+        for (let j=0; j<COLUMNAS;j++)
+            aula.activaEquipo(new Equipo("Descripción equipo "+aula.Numero+"-"+i+"-"+j, false), i, j);
+    });
 
-// asignaciones.forEach ((asignacion)=>{
-//         console.table(dptoNaranco.Aulas.get(asignacion.aula).aula.Equipos);
-//         console.log("Porcentaje de ocupación tras asignaciones aula "+asignacion.aula+":"+dptoNaranco.Aulas.get(asignacion.aula).aula.getPorcentajeOcupacion()+"%");
-//         });
+asignaciones.forEach ((asignacion)=>{
+        console.table(dptoNaranco.Aulas.get(asignacion.aula).aula.Equipos);
+        console.log("Porcentaje de ocupación tras asignaciones aula "+asignacion.aula+":"+dptoNaranco.Aulas.get(asignacion.aula).aula.getPorcentajeOcupacion()+"%");
+        });
 
 function datosPortatiles(){
     console.log ("%cACTIVANDO PORTÁTILES QUE SE VAN A USAR...", 'background: #222; color: #bada55');
@@ -42,4 +42,5 @@ function datosPortatiles(){
 datosPortatiles(); //Pendiente de implementar
 
 
-// console.log("%cEl número total de equipos en el departamento es: "+dptoNaranco.getNEquipos()+" equipos--------------------", 'background: #FADBD8');
+console.log("%cEl número total de equipos en el departamento es: "+dptoNaranco.getNEquipos()+" equipos--------------------", 'background: #FADBD8');
+datosPortátiles();

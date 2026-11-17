@@ -4,16 +4,17 @@ export class Equipo {
     #fecha;
     #descripcion;
     #personal;
-    constructor(descripcion, personal, dias) {
-
-        this.#fecha = new Date("2027-06-30");
+    constructor(descripcion, personal, dias = 0) {
+        let fechaInicial = new Date("2027-06-30");
+        let fechaFinal = new Date(fechaInicial.getTime() + (dias * 24 * 3600000));
+        this.#fecha = fechaFinal.getDate() + "-" + fechaFinal.getMonth()+1 + "-" + fechaFinal.getFullYear();
         this.#descripcion = descripcion;
         this.#personal = personal;
-        
+
 
         let letra = "";
-        this.#personal = true ? letra = "P" : letra = "S";
-        this.#id = letra + "-" + descripcion.slice(-3) + "-" + this.#fecha.getDate() + "-" + this.#fecha.getMonth() + "-" + this.#fecha.getFullYear();
+        this.#personal == true ? letra = "P" : letra = "S";
+        this.#id = letra + "-" + descripcion.slice(-3) + "-" + this.#fecha;
     }
     set Id(value) {
         this.#id = value;
@@ -41,7 +42,7 @@ export class Equipo {
     }
 
 
-    toString(){
+    toString() {
         return this.#id;
     }
 }
