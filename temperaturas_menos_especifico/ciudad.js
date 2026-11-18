@@ -15,9 +15,12 @@ export class Ciudad {
         this.#temperaturas[dia] = temperatura;
     }
     toHtml() {
-        let cadena = "";
-        cadena += "<td>" + this.#nombre + "<tr>"
-        this.#temperaturas.forEach(temp => cadena += "<td>" + temp + "<tr>")
+        let cadena = "<tr>";
+        cadena += "<td><strong>" + this.#nombre + "</strong></td>";
+        this.#temperaturas.forEach(temp => {
+            cadena += "<td>" + temp + "</td>";
+        });
+        cadena += "</tr>";
         return cadena;
     }
 
