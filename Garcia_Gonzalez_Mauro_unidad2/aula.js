@@ -2,13 +2,14 @@ import { Equipo } from "./equipo.js";
 
 export class Aula {
     #numero;
-    #equipos = [[], []];
+    #equipos ;
     #puestos;
 
     constructor(numero, filas, columnas) {
         this.#numero = numero;
-        this.#puestos = filas * columnas;
 
+        this.#puestos = filas * columnas;
+        this.#equipos = [[], []];
     }
     set Numero(value) {
         this.#numero = value;

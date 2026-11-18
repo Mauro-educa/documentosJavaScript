@@ -2,7 +2,7 @@ export class DptoInformatica {
     #aulas;
 
     constructor() {
-        // clave: número de aula -> valor: { aula, grupo }
+        // clave: número de aula  valor: { aula, grupo }
         this.#aulas = new Map();
     }
     set Aulas(value) {
