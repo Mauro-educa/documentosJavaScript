@@ -1,0 +1,33 @@
+let frase = "esto es una frase";
+
+
+console.log(frase.trim().split(" ").length);
+
+
+let fecha = ("12/02/2000");
+
+let arrFechaDividida = fecha.split("/");
+
+console.log("es el dia " + arrFechaDividida[0]);
+console.log("del mes " + arrFechaDividida[1]);
+console.log("del año " + arrFechaDividida[2]);
+
+
+let matriz1 = [[], []];
+let matriz2 = [[], []];
+let matrizResultado = [[], []];
+
+for (let i = 0; i < 3; i++) {
+
+    for (let j = 0; j < 3; j++) {
+        matriz1[i][j] = Math.floor(Math.random() * 9);
+        matriz2[i][j] = Math.floor(Math.random() * 9);
+    }
+}
+
+matriz1.forEach((fila, i) => {
+    fila.forEach((valor, j) => {
+            valor*matriz1[j][i];
+    })
+}
+);

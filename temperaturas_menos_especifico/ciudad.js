@@ -6,7 +6,7 @@ export class Ciudad {
         this.#nombre = nombre;
         this.#temperaturas = [];
     }
-    recogerTemperaturas() {
+    generaTemperaturas() {
         for (let i = 0; i <= 30; i++) {
             this.#temperaturas[i] = Math.floor((Math.random() * 60) + -20);
         }
