@@ -3,7 +3,7 @@ export class Persona {
     #apellidos;
     #dni;
     #telefono;
-    construct(nombre, apellidos, dni, telefono) {
+    constructor(nombre, apellidos, dni, telefono) {
         this.#apellidos = apellidos;
         this.#nombre = nombre;
         this.#dni = dni;

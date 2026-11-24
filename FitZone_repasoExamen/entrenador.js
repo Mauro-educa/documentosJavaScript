@@ -1,11 +1,18 @@
-export class Entrenador extends Persona{
-    #actividades=[];
-    construct(nombre,apellidos,dni,telefono,actividades){
-        this.#actividades=actividades;
-        super(nombre,apellidos,dni,telefono);
+import { Persona } from "./persona.js";
+
+export class Entrenador extends Persona {
+    #actividades = [];
+
+    constructor(nombre, apellidos, dni, telefono, actividades) {
+        super(nombre, apellidos, dni, telefono);
+        this.#actividades = actividades;
     }
-    reservarClase(numeroClase,nota){
-        return "el el entrenador "+super(socio)+" valora la clase "+
-        numeroClase + " con la nota "+nota;
+
+    valorarSesion(numeroClase, nota) {
+        return "El entrenador " + this.Nombre + " valora la clase nº " + numeroClase + " con una nota de " + nota;
+    }
+
+    get Actividades() {
+        return this.#actividades;
     }
 }

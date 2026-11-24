@@ -47,10 +47,10 @@ let ciudad2 = new Ciudad("madrid");
 let ciudad3 = new Ciudad("sevilla");
 let ciudad4 = new Ciudad("bilbao");
 
-ciudad1.recogerTemperaturas();
-ciudad2.recogerTemperaturas();
-ciudad3.recogerTemperaturas();
-ciudad4.recogerTemperaturas();
+ciudad1.generaTemperaturas();
+ciudad2.generaTemperaturas();
+ciudad3.generaTemperaturas();
+ciudad4.generaTemperaturas();
 
 let centralMedidas = new CentralMedidas();
 
