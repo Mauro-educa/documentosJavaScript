@@ -1,0 +1,32 @@
+span{
+    margin-left: 10px;
+    border:solid,black;
+}
+p{
+  padding-left: 10px;
+   padding-top: 10px;
+    border:solid,black;
+}
+input{
+    visibility: hidden;
+    border:solid,black;
+}
+label{
+    display: none;
+    border:solid,red;
+}
+
+li a {
+  color: #1d29d8;
+}
+a:visited{
+      color: #a31dd8;
+}
+
+li + a{
+      background-color:rgb(0, 179, 255);
+}
+
+li > a{
+      border:solid,rgb(255, 0, 0);
+}
